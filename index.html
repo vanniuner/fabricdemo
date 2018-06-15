@@ -19,7 +19,6 @@
             var rect = new fabric.Image(img, {
                 transparentCorners:false,
                 "hasRotatingPoint" : false,
-                lockRotation : true,
                 hoverCursor:"point",
                 cornerStyle: 'circle',
                 cornerColor: 'grey',
@@ -27,12 +26,10 @@
                 padding:10,
                 top : 0,
                 left : 0,
-                fill : 'red',
                 hasBorders:true,
                 centeredScaling:true,
                 minScaleLimit:0.5,
                 lockUniScaling:true,
-                //__corner: 'ml',
                 lockScalingFlip:true
             });
             miacanvas.add(rect);
