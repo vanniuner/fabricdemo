@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <canvas id="canvas" width="800" height="900"></canvas>
+    <img style="display:none" src="panda.png" id="my-image">
+    <img style="display:none" src="a.png" id="a">
+    <script type="text/javascript" src="fabric.js" ></script>
+    <script>
+        miacanvas = new fabric.Canvas('canvas',{
+            hasControls: false,
+            lockMovementX: true,
+            lockMovementY: true,
+            evented: false,
+            selectable: false
+        });
+        function addf(img){
+            var rect = new fabric.Image(img, {
+                transparentCorners:false,
+                "hasRotatingPoint" : false,
+                lockRotation : true,
+                hoverCursor:"point",
+                cornerStyle: 'circle',
+                cornerColor: 'grey',
+                cornerSize:50,
+                padding:10,
+                top : 0,
+                left : 0,
+                fill : 'red',
+                hasBorders:true,
+                centeredScaling:true,
+                minScaleLimit:0.5,
+                lockUniScaling:true,
+                //__corner: 'ml',
+                lockScalingFlip:true
+            });
+            miacanvas.add(rect);
+        }
+
+        var imgElement = document.getElementById('my-image');
+        var a = document.getElementById('a');
+        addf(imgElement)
+        addf(a)
+
+        
+    </script>
+</body>
+</html>
